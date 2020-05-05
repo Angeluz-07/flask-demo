@@ -1,13 +1,30 @@
 # flask-demo
 Demo to showcase flask basic features
 
-## Set new environment in Windows
-- `mkdir .venv`
-- `python -m venv .venv`
-- `.venv\Scripts\activate.bat`
-- `pip install -r requirements.txt`
+## Set development environment
+###  Windows
+```
+mkdir .venv
+python -m venv .venv
+.venv\Scripts\activate.bat
+pip install -r requirements.txt
+```
+###  Linux Based OS
+```
+mkdir .venv
+virtualenv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+````
+### Set git hooks
+```
+pre-commit install -t pre-commit -t commit-msg
+```
 
 ## Example usage in Windows
-- `set FLASK_APP=api-demo/app.py`
-- `flask run`
-- Open `http://127.0.0.1:5000/` in a browser
+Run
+```
+set FLASK_APP=<app_folder>/app.py
+flask run
+```
+Open `http://127.0.0.1:5000/`
